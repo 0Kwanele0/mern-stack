@@ -1,11 +1,11 @@
 const express = require("express");
-const db = require("../server/db/db");
 const app = express();
+const db = require("../server/db/db");
+const routes = require("../server/routes/routes");
 
 db();
-app.get("/", (req, res) => {
-  res.send("hello");
-});
+app.use(express.json());
+app.use("/user", routes);
 app.listen(2000, () => {
   console.log("listening on port 2000");
 });

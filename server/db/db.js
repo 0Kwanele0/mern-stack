@@ -6,7 +6,7 @@ const db = async () => {
   try {
     mongodb
       .connect(
-        "mongodb+srv://kwanele:kwanele@cluster0.tokqm.mongodb.net/myFirstDatabase?retryWrites=true&w=majoritypasswo",
+        "mongodb+srv://kwanele:kwanele@cluster0.tokqm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
         {
           useNewUrlParser: true,
           useUnifiedTopology: true,
