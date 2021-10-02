@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [name, setName] = useState("");
+  const [friend, setFriend] = useState("");
+  const changingName = (e) => {
+    setName(e.target.value);
+  };
+  const changingFriend = (e) => {
+    setFriend(e.target.value);
+  };
+  const styles = {
+    padding: 10,
+    fontSize: 20,
+    margin: 10,
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello world</h1>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <input
+          style={styles}
+          value={name}
+          onChange={changingName}
+          name="name"
+          type="text"
+        />
+        <input
+          style={styles}
+          value={friend}
+          onChange={changingFriend}
+          name="friend"
+          type="text"
+        />
+        <button style={styles} type="submit">
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
