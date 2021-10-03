@@ -23,7 +23,7 @@ const User = new mongoose.Schema({
   },
   salary: {
     required: true,
-    type: String,
+    type: Number,
   },
 });
 

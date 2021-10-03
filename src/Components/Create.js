@@ -19,7 +19,7 @@ function Create() {
     });
   };
 
-  const submiting = () => {
+  const submiting = (e) => {
     const mydata = {
       name: state.name,
       surname: state.surname,
@@ -83,7 +83,7 @@ function Create() {
           value={state.salary}
           onChange={changingValues}
           name="salary"
-          type="text"
+          type="number"
           placeholder="Salary"
         />
         <button style={styles} type="submit">
