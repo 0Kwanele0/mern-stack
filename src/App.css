@@ -1,27 +1,53 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-table {
   margin: 50px;
-  background-color: rgb(38, 37, 51);
-  color: aliceblue;
-  text-align: left;
-  border-collapse: collapse;
-  min-width: 300px;
 }
-thead {
-  background-color: rgb(60, 61, 78);
+@media screen and (max-width: 580px) {
+  .App {
+    margin: 50px 20px;
+  }
 }
-
-thead td {
+@media screen and (max-width: 400px) {
+  .App {
+    margin: 20px 0;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(230, 233, 248);
+  padding: 10px 30px;
+}
+.nav a {
+  text-decoration: none;
   font-weight: 500;
+  font-size: 22px;
 }
-td {
-  font-size: 33px;
-  padding: 10px;
-  border: 1px solid blueviolet;
+.data {
+  max-width: 600px;
+  text-align: left;
+}
+.indi {
+  margin: 15px;
+  display: flex;
+  background-color: rgb(224, 224, 224);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.indi a {
+  height: fit-content;
+  padding: 12px 22px;
+  background-color: rgb(47, 102, 173);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(235, 235, 235);
+  font-weight: 500;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.indi a:hover {
+  background-color: rgb(64, 88, 224);
 }

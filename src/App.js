@@ -1,46 +1,21 @@
-import { useState } from "react";
 import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import Each from "./Components/Each";
+import Create from "./Components/Create";
+import Nav from "./Components/Nav";
 
 function App() {
-  const [name, setName] = useState("");
-  const [friend, setFriend] = useState("");
-  const changingName = (e) => {
-    setName(e.target.value);
-  };
-  const changingFriend = (e) => {
-    setFriend(e.target.value);
-  };
-  const styles = {
-    padding: 10,
-    fontSize: 20,
-    margin: 10,
-  };
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
-        <input
-          style={styles}
-          value={name}
-          onChange={changingName}
-          name="name"
-          type="text"
-        />
-        <input
-          style={styles}
-          value={friend}
-          onChange={changingFriend}
-          name="friend"
-          type="text"
-        />
-        <button style={styles} type="submit">
-          Submit
-        </button>
-      </form>
+    <div>
+      <BrowserRouter>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/:id" component={Each} />
+          <Route path="/create" component={Create} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
