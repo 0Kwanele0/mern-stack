@@ -5,7 +5,23 @@ const User = new mongoose.Schema({
     required: true,
     type: String,
   },
-  friend: {
+  surname: {
+    required: true,
+    type: String,
+  },
+  age: {
+    required: true,
+    type: Number,
+  },
+  identity: {
+    required: true,
+    type: Number,
+  },
+  job: {
+    required: true,
+    type: String,
+  },
+  salary: {
     required: true,
     type: String,
   },
