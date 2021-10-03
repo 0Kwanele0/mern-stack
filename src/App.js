@@ -12,8 +12,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/create" component={Create} />
           <Route path="/:id" component={Each} />
-          <Route path="/create" component={Create} />
         </Switch>
       </BrowserRouter>
     </div>

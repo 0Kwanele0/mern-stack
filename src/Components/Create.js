@@ -5,10 +5,10 @@ function Create() {
   const [state, setState] = useState({
     name: "",
     surname: "",
-    age: 0,
-    identity: 0,
+    age: "",
+    identity: "",
     job: "",
-    salary: 0,
+    salary: "",
   });
 
   const changingValues = (e) => {
@@ -44,6 +44,7 @@ function Create() {
           onChange={changingValues}
           name="name"
           type="text"
+          placeholder="Name"
         />
         <input
           style={styles}
@@ -51,6 +52,7 @@ function Create() {
           onChange={changingValues}
           name="surname"
           type="text"
+          placeholder="Surname"
         />
         <input
           style={styles}
@@ -58,6 +60,7 @@ function Create() {
           onChange={changingValues}
           name="age"
           type="number"
+          placeholder="Age"
         />
         <input
           style={styles}
@@ -65,6 +68,7 @@ function Create() {
           onChange={changingValues}
           name="identity"
           type="number"
+          placeholder="Identity"
         />
         <input
           style={styles}
@@ -72,6 +76,7 @@ function Create() {
           onChange={changingValues}
           name="job"
           type="text"
+          placeholder="Job"
         />
         <input
           style={styles}
@@ -79,6 +84,7 @@ function Create() {
           onChange={changingValues}
           name="salary"
           type="text"
+          placeholder="Salary"
         />
         <button style={styles} type="submit">
           Submit

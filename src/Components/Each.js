@@ -18,7 +18,11 @@ function Each() {
       <div className="each">
         <h1>Individual</h1>
         <p>{data.name}</p>
-        <p>{data.friend}</p>
+        <p>{data.surname}</p>
+        <p>{data.age}</p>
+        <p>{data.identity}</p>
+        <p>{data.job}</p>
+        <p>{data.salary}</p>
       </div>
     </div>
   );
