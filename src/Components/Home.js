@@ -14,16 +14,37 @@ function Home() {
 
   return (
     <div className="App">
-      <div className="data">
-        {myusers.map((item, key) => {
-          return (
-            <div className="indi" key={key}>
-              <p>{item.name}</p>
-              <a href={`/${item._id}`}>Edit</a>
-            </div>
-          );
-        })}
-      </div>
+      {myusers.length > 0 ? (
+        <div className="data">
+          {myusers.map((item, key) => {
+            return (
+              <div className="indi" key={key}>
+                <p>{item.name}</p>
+                <a href={`/${item._id}`}>Edit</a>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div style={{ textAlign: "center" }}>
+          <h1>If you have users, They should appear Here!</h1>
+          <a
+            href="/create"
+            style={{
+              padding: "15px 30px",
+              margin: 10,
+              fontSize: 16,
+              fontWeight: 600,
+              backgroundColor: "dodgerblue",
+              color: "white",
+              border: 0,
+              textDecoration: 0,
+            }}
+          >
+            Add User
+          </a>
+        </div>
+      )}
     </div>
   );
 }
